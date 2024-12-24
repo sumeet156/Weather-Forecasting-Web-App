@@ -12,6 +12,9 @@ Designed with user-friendly navigation, this project provides both location-base
 
 # Deployment Link: https://meow-weather.netlify.app/
 
+# Screenshots: [User Permission](assets/permission_ui.png) , [search weather](assets/search_weather_ui.png) , [current location](assets/current_loc.png) , [error interface](assets/error_interface.png)
+
+
 # Tech Stack
 - Frontend: HTML5, CSS3, JavaScript (ES6+)
 - API Integration: OpenWeatherMap API

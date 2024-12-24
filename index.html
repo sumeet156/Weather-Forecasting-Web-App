@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Meow Codes</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon and Stylesheet -->
+    <link rel="icon" type="image/png" href="./assets/moon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="wrapper">
+        <!-- App Header -->
+        <h1>Weather App</h1>
+
+        <!-- Tab Navigation -->
+        <div class="tab-container">
+            <p class="tab current-tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <!-- Main Content Container -->
+        <div class="weather-container">
+            <!-- 1. Location Access Section -->
+            <div class="grant-location-container active" data-grantLocation>
+                <img src="./assets/location.png" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access to get Weather Information</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- 2. Search Form Section -->
+            <form class="form-container hidden" data-searchForm>
+                <input placeholder="Search for City..." data-searchInput>
+                <button class="btn" type="submit">
+                    <img src="./assets/search.png" width="20" height="20" loading="lazy">
+                </button>
+            </form>
+
+            <!-- 3. Loading State Section -->
+            <div class="loading-container hidden" data-loading>
+                <img src="./assets/loading.gif" width="150" height="150">
+                <p>Loading...</p>
+            </div>
+
+            <!-- 4. Weather Info Display Section -->
+            <div class="user-info-container hidden" data-userInfo>
+                <!-- City and Country Info -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+
+                <!-- Weather Details -->
+                <p data-weatherDesc></p>
+                <img data-weatherIcon>
+                <p data-temp></p>
+
+                <!-- Additional Weather Parameters -->
+                <div class="parameter-container">
+                    <!-- Wind Speed -->
+                    <div class="parameter">
+                        <img src="./assets/wind.png">
+                        <p>Wind Speed</p>
+                        <p data-windspeed></p>
+                    </div>
+                    <!-- Humidity -->
+                    <div class="parameter">
+                        <img src="./assets/humidity.png">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <!-- Cloudiness -->
+                    <div class="parameter">
+                        <img src="./assets/cloud.png">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Error State Section -->
+            <div class="not-found-container hidden" data-notFound>
+                <img src="./assets/not-found.png" alt="Not Found" width="150" height="150">
+                <p>City not found. Please try again.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

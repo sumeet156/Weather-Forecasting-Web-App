@@ -9,7 +9,7 @@ const userInfoContainer = document.querySelector(".user-info-container");
 
 // Initial variables
 let currentTab = userTab;
-const API_KEY = "e811fdbd2012ecd76eecb49bcee61c40";
+const API_KEY = "{Enter-Your-OpenWeatherMap-API-KEY}";         // Register to openweathermap and generate key and paste here
 currentTab.classList.add("current-tab");
 getFromSessionStorage();
 
